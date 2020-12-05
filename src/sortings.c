@@ -3,14 +3,6 @@
 
 #define swap_strings(a, b) char *temp = a; a = b; b = temp
 
-void free_array(strings_array_t array, array_size_t array_size)
-{
-	for (array_size_t i = 0; i < array_size; i++)
-		free(array[i]);
-	
-	free(array);
-}
-
 void bubble(strings_array_t array, array_size_t array_size, comparator_func_t cmp)
 {
 	for (array_size_t i = 0; i < array_size; i++)

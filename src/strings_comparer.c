@@ -4,6 +4,14 @@
 
 #define NUMBER_OF_ARGUMENTS 6
 
+void free_array(strings_array_t array, array_size_t array_size)
+{
+	for (array_size_t i = 0; i < array_size; i++)
+		free(array[i]);
+	
+	free(array);
+}
+
 typedef enum
 {
 	BUBBLE_SORT = 0,
