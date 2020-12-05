@@ -134,7 +134,7 @@ int read_array(strings_array_t array, array_size_t array_size, FILE *input)
 int write_array(strings_array_t array, array_size_t array_size, FILE *output)
 {
 	for (array_size_t i = 0; i < array_size; i++)
-		if (fputs(array[i], output))
+		if (fputs(array[i], output) == EOF)
 			return -1;
 			
 	return 0;
