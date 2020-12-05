@@ -163,8 +163,8 @@ int main(int argc, char **argv)
 	
 	number_of_strings = atoi(argv[1]);
 	
-	input = fopen(argv[2], "rb");
-	output = fopen(argv[3], "wb");
+	input = fopen(argv[2], "r");
+	output = fopen(argv[3], "w");
 	
 	if (input == NULL || output == NULL)
 	{
