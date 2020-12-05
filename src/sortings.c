@@ -15,9 +15,9 @@ void bubble(strings_array_t array, array_size_t array_size, comparator_func_t cm
 
 void insertion(strings_array_t array, array_size_t array_size, comparator_func_t cmp)
 {
-	for (int i = 1; i < array_size; i++)
+	for (array_size_t i = 1; i < array_size; i++)
 	{
-		int j = i;
+		array_size_t j = i;
 		
 		while (j != 0 && !cmp(array[j - 1], array[j]))
 		{
