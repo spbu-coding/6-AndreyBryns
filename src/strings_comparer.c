@@ -126,8 +126,6 @@ int read_array(strings_array_t array, array_size_t array_size, FILE *input)
 		}
 		else
 			array[i][symbol_index] = '\0';
-		
-		//printf("%d\n", strlen(array[i]));
 	}
 	
 	return 0;
@@ -277,7 +275,7 @@ int main(int argc, char **argv)
 		
 		case QUICK_SORT:
 		{
-			quick(array, number_of_strings, cmp);
+			bubble(array, number_of_strings, cmp);
 			
 			break;
 		}
