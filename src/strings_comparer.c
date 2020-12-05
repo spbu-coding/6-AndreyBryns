@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "sortings.c"
+#include "sortings.h"
 
 #define NUMBER_OF_ARGUMENTS 6
 

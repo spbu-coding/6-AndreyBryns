@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include "sortings.h"
 
 #define swap_strings(a, b) char *temp = a; a = b; b = temp
 
