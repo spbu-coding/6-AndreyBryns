@@ -229,7 +229,7 @@ int main(char argc, char **argv)
 	
 	strings_array_t array = allocate_memory_for_strings_array(number_of_strings);
 	
-	if (allocate_memory_for_strings_array == NULL)
+	if (array == NULL)
 	{
 		fprintf(stderr, "Memory allocation error\n");
 
