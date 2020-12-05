@@ -31,7 +31,7 @@ int asc(const char *a, const char *b)
 	else
 		len = strlen(a);
 	
-	result_of_comparing = strncmp(a, b, len - 1);
+	result_of_comparing = strncmp(a, b, len);
 
 	if (result_of_comparing == 0)
 	{
@@ -50,7 +50,7 @@ int des(const char *a, const char *b)
 	else
 		len = strlen(a);
 		
-	result_of_comparing = strncmp(a, b, len - 1);
+	result_of_comparing = strncmp(a, b, len);
 	
 	if (result_of_comparing == 0)
 		return strlen(a) > strlen(b);
@@ -119,13 +119,13 @@ int read_array(strings_array_t array, array_size_t array_size, FILE *input)
 			symbol_index++; 
 		}
 		
-		if (i == array_size - 1)
-		{
+	//	if (i == array_size - 1)
+	//	{
 			array[i][symbol_index] = '\n';
 			array[i][symbol_index + 1] = '\0';
-		}
-		else
-			array[i][symbol_index] = '\0';
+	//	}
+	//	else
+	//		array[i][symbol_index] = '\0';
 	}
 	
 	return 0;
