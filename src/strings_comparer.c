@@ -119,13 +119,8 @@ int read_array(strings_array_t array, array_size_t array_size, FILE *input)
 			symbol_index++; 
 		}
 		
-	//	if (i == array_size - 1)
-	//	{
-			array[i][symbol_index] = '\n';
-			array[i][symbol_index + 1] = '\0';
-	//	}
-	//	else
-	//		array[i][symbol_index] = '\0';
+		array[i][symbol_index] = '\n';
+		array[i][symbol_index + 1] = '\0';
 	}
 	
 	return 0;
@@ -275,7 +270,7 @@ int main(int argc, char **argv)
 		
 		case QUICK_SORT:
 		{
-			bubble(array, number_of_strings, cmp);
+			quick(array, number_of_strings, cmp);
 			
 			break;
 		}
