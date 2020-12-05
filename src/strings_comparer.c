@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "sortings.h"
+#include "sortings.c"
 
 #define NUMBER_OF_ARGUMENTS 6
 
@@ -23,7 +23,8 @@ typedef enum
 
 int asc(const char *a, const char *b)
 {
-	unsigned int len, result_of_comparing;
+	unsigned int len; 
+	int result_of_comparing;
 	
 	if (strlen(a) > strlen(b))
 		len = strlen(b);
@@ -41,7 +42,8 @@ int asc(const char *a, const char *b)
 
 int des(const char *a, const char *b)
 {
-	unsigned int len, result_of_comparing;
+	unsigned int len;
+	int result_of_comparing;
 	
 	if (strlen(a) > strlen(b))
 		len = strlen(b);
@@ -140,7 +142,7 @@ int write_array(strings_array_t array, array_size_t array_size, FILE *output)
 	return 0;
 }
 
-int main(char argc, char **argv)
+int main(int argc, char **argv)
 {
 	if (argc != NUMBER_OF_ARGUMENTS)
 	{
