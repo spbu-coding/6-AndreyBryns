@@ -63,7 +63,7 @@ int is_number(char *str)
 	unsigned int len = strlen(str);
 	
 	for (unsigned int i = 0; i < len; i++)
-		if (str[i] < '0' && str[i] > '9')
+		if (str[i] < '0' || str[i] > '9')
 			return 0;
 	
 	return 1;
